@@ -7,7 +7,7 @@ Este es un proyecto simple de una aplicación de consola desarrollada en Java pa
 * **Registrar Nuevas Reservas:** Permite crear reservas para clientes, especificando el número de personas, fecha y hora.
 * **Listar Reservas Activas:** Muestra un listado de todas las reservas que no han sido canceladas.
 * **Buscar por Cliente:** Permite buscar todas las reservas asociadas a un nombre de cliente específico.
-* **Cancelar Reservas:** Ofrece la funcionalidad de cancelar una reserva existente a través de su ID único.
+* **Cancelar Reservas:** Ofrece la funcionalidad de cancelar una reserva existente a través del nombre del cliente.
 * **Validación de Reglas de Negocio:**
     * No permite reservas para más de 8 personas.
     * El horario de atención está restringido (12:00 a 23:00).
