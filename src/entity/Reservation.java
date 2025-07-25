@@ -32,7 +32,7 @@ public class Reservation {
     }
 
     public void setQuantityPersons(int quantityPersons) {
-        if(quantityPersons < 0 || quantityPersons > 8) throw new IllegalArgumentException("La cantidad de personas debe estar entre 0 y 8.");
+        if(quantityPersons <= 0 || quantityPersons > 8) throw new IllegalArgumentException("La cantidad de personas debe estar entre 1 y 8.");
         this.quantityPersons = quantityPersons;
     }
 
@@ -73,14 +73,11 @@ public class Reservation {
 
     @Override
     public String toString() {
-        // Formateadores para una salida consistente
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 
-        // Determina el estado de la reserva en texto
         String estado = this.isActive ? "Activa" : "Cancelada";
 
-        // Construye la cadena de texto con el formato deseado
         return "Detalles de la Reserva:\n" +
                 "  - Id: " + this.id + "\n" +
                 "  - Cliente: " + this.customer.getName() + " " + this.customer.getLastName() + "\n" +

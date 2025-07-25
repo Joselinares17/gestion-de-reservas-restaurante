@@ -49,7 +49,7 @@ public class Customer {
 
     public void setPhone(String phone) {
         if(phone == null || phone.isBlank()) throw new IllegalArgumentException("El número telefónico no puede estar vacío.");
-        if(phone.matches("\\d{9}")) throw new IllegalArgumentException("El número telefónico debe ser de 9 cifras.");
+        if(!phone.matches("\\d{9}")) throw new IllegalArgumentException("El número telefónico debe ser de 9 cifras.");
         this.phone = phone;
     }
 
